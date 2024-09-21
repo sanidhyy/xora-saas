@@ -1,9 +1,9 @@
-const App = () => {
+import { Header } from "./sections/Header";
+
+export const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <main className="overflow-hidden">
+      <Header />
+    </main>
   );
 };
-
-export default App;
