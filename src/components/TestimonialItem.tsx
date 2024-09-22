@@ -1,4 +1,4 @@
-import { testimonials } from "../constants";
+import type { testimonials } from "../constants";
 import { cn } from "../lib/utils";
 
 interface TestimonialItemProps {

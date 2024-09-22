@@ -3,8 +3,8 @@ import CountUp from "react-countup";
 import { Element } from "react-scroll";
 
 import { plans } from "../constants";
-import { cn } from "../lib/utils";
 import { Button } from "../components/Button";
+import { cn } from "../lib/utils";
 
 export const Pricing = () => {
   const [monthly, setMonthly] = useState(false);

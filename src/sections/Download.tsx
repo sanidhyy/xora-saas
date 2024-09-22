@@ -1,6 +1,7 @@
 import { Element } from "react-scroll";
-import { links, logos } from "../constants";
+
 import { Marker } from "../components/Marker";
+import { links, logos } from "../constants";
 
 export const Download = () => {
   return (
