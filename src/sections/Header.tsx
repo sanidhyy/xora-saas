@@ -42,9 +42,16 @@ export const Header = () => {
     >
       <div className="container flex h-14 items-center max-lg:px-5">
         <div className="lg:hidden flex-1 z-2">
-          <a href="/" className="block w-fit cursor-pointer">
+          <LinkScroll
+            to="hero"
+            offset={-250}
+            onClick={() => setIsOpen(false)}
+            spy
+            smooth
+            className="block w-fit cursor-pointer"
+          >
             <img src="/images/xora.svg" width={115} height={55} alt="logo" />
-          </a>
+          </LinkScroll>
         </div>
 
         <div
