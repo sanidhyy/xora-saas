@@ -208,7 +208,7 @@ export const testimonials = [
     comment:
       "The efficiency boost is undeniable. This platform has transformed our workflow, forever.",
   },
-];
+] as const;
 
 export const logos = [
   {
