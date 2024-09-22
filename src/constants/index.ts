@@ -157,7 +157,7 @@ export const plans = [
     icon: "/images/hexagon.svg",
     logo: "/images/plan-3.png",
   },
-];
+] as const;
 
 export const testimonials = [
   {
