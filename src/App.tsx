@@ -1,3 +1,4 @@
+import { Features } from "./sections/Features";
 import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
 
@@ -7,6 +8,8 @@ export const App = () => {
       <Header />
 
       <Hero />
+
+      <Features />
     </main>
   );
 };
