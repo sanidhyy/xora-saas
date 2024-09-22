@@ -36,7 +36,7 @@ export const Download = () => {
                     <a
                       href={url}
                       title={title}
-                      className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
+                      className="download_tech-icon_before relative flex size-22 items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
                     >
                       <span className="absolute -top-2 rotate-90">
                         <Marker />
@@ -58,7 +58,7 @@ export const Download = () => {
             </div>
 
             <div className="mb-10 max-md:hidden">
-              <div className="download_preview-before download_preview-after rounded-40 relative w-[955px] border-2 border-s5 p-6">
+              <div className="download_preview-before download_preview-after relative w-[955px] rounded-40 border-2 border-s5 p-6">
                 <div className="relative rounded-3xl bg-s1 px-6 pb-6 pt-14">
                   <span className="download_preview-dot left-6 bg-p2" />
                   <span className="download_preview-dot left-11 bg-s3" />

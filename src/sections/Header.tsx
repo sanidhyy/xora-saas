@@ -15,7 +15,7 @@ export const Header = () => {
       spy
       smooth
       activeClass="nav-active"
-      className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+      className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
     >
       {title}
     </LinkScroll>
@@ -36,12 +36,12 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
-        hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]"
+        "fixed left-0 top-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
+        hasScrolled && "bg-black-100 py-2 backdrop-blur-[8px]"
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-5">
-        <div className="lg:hidden flex-1 z-2">
+        <div className="z-2 flex-1 lg:hidden">
           <LinkScroll
             to="hero"
             offset={-250}
@@ -56,11 +56,11 @@ export const Header = () => {
 
         <div
           className={cn(
-            "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
+            "w-full max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
             isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none"
           )}
         >
-          <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
+          <div className="sidebar-before max-lg:relative max-lg:flex max-lg:min-h-screen max-lg:flex-col max-lg:overflow-hidden max-lg:p-6 max-md:px-4">
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block max-lg:px-12">
                 <li className="nav-li">
@@ -76,7 +76,7 @@ export const Header = () => {
                     spy
                     smooth
                     className={cn(
-                      "max-lg:hidden transition-transform duration-500 cursor-pointer"
+                      "cursor-pointer transition-transform duration-500 max-lg:hidden"
                     )}
                   >
                     <img
@@ -96,7 +96,7 @@ export const Header = () => {
               </ul>
             </nav>
 
-            <div className="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90">
+            <div className="absolute left-0 top-1/2 block h-[380px] w-[960px] -translate-y-1/2 translate-x-[-290px] rotate-90 lg:hidden">
               <img
                 src="/images/bg-outlines.svg"
                 alt="outline"
@@ -110,7 +110,7 @@ export const Header = () => {
                 alt="outline fill"
                 width={960}
                 height={380}
-                className="absolute inset-0 mix-blend-soft-light opacity-5"
+                className="absolute inset-0 opacity-5 mix-blend-soft-light"
               />
             </div>
           </div>
@@ -118,7 +118,7 @@ export const Header = () => {
 
         <button
           onClick={() => setIsOpen((prevOpen) => !prevOpen)}
-          className="lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
+          className="z-2 flex size-10 items-center justify-center rounded-full border-2 border-s4/25 lg:hidden"
         >
           <img
             src={`/images/${isOpen ? "close.svg" : "magic.svg"}`}

@@ -56,7 +56,7 @@ export const FaqItem = ({ id, question, answer, index }: FaqItemProps) => {
 
       <div
         className={cn(
-          "g5 -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500 absolute",
+          "g5 absolute -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500",
           active && "opacity-100"
         )}
       >

@@ -22,7 +22,7 @@ export const Button = ({
 }: PropsWithChildren<ButtonProps>) => {
   const Inner = () => (
     <>
-      <span className="relative flex items-center min-h-[60px] px-4 g4 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden">
+      <span className="g4 inner-before relative flex min-h-[60px] items-center overflow-hidden rounded-2xl px-4 group-hover:before:opacity-100">
         <span className="absolute -left-[1px]">
           <Marker fill={markerFill} />
         </span>
@@ -31,11 +31,11 @@ export const Button = ({
           <img
             src={icon}
             alt="circle"
-            className="size-10 mr-5 object-contain z-10"
+            className="z-10 mr-5 size-10 object-contain"
           />
         )}
 
-        <span className="relative z-2 font-poppins base-bold text-p1 uppercase">
+        <span className="base-bold relative z-2 font-poppins uppercase text-p1">
           {children}
         </span>
 
@@ -49,7 +49,7 @@ export const Button = ({
       <a
         href={href}
         className={cn(
-          "relative p-0.5 g5 rounded-2xl shadow-500 group",
+          "g5 group relative rounded-2xl p-0.5 shadow-500",
           containerClassName
         )}
       >
@@ -62,7 +62,7 @@ export const Button = ({
     <button
       onClick={onClick}
       className={cn(
-        "relative p-0.5 g5 rounded-2xl shadow-500 group",
+        "g5 group relative rounded-2xl p-0.5 shadow-500",
         containerClassName
       )}
     >
