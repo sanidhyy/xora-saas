@@ -1,4 +1,4 @@
-import { socials } from "../constants";
+import { site_links, socials } from "../constants";
 
 export const Footer = () => {
   return (
@@ -9,7 +9,7 @@ export const Footer = () => {
             <p className="opacity-70">&copy; Copyright, Xora</p>
           </div>
 
-          <div className="flex items-center justify-center sm:ml-auto">
+          <div className="flex items-center justify-center max-md:mt-4 sm:ml-auto">
             <a
               href="#"
               className="legal-after relative mr-9 text-p5 transition-all duration-500 hover:text-p1"
@@ -19,9 +19,18 @@ export const Footer = () => {
 
             <a
               href="#"
-              className="text-p5 transition-all duration-500 hover:text-p1"
+              className="legal-after relative mr-9 text-p5 transition-all duration-500 hover:text-p1"
             >
               Terms of Use
+            </a>
+
+            <a
+              href={site_links.sourceCode}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-p5 transition-all duration-500 hover:text-p1"
+            >
+              Source Code
             </a>
           </div>
 

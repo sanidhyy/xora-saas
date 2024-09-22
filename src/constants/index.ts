@@ -301,3 +301,7 @@ export const socials = [
     url: "#",
   },
 ] as const;
+
+export const site_links = {
+  sourceCode: "https://github.com/sanidhyy/xora-saas",
+} as const;
