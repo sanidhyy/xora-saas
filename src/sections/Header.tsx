@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
+
 import { cn } from "../lib/utils";
 
 interface NavLinkProps {

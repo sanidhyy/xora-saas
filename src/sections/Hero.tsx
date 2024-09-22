@@ -1,4 +1,5 @@
 import { Element, Link as LinkScroll } from "react-scroll";
+
 import { Button } from "../components/Button";
 
 export const Hero = () => {
