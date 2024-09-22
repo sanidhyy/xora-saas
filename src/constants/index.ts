@@ -109,7 +109,7 @@ export const faq = [
     answer:
       "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
   },
-];
+] as const;
 
 export const plans = [
   {
