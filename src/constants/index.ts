@@ -300,4 +300,4 @@ export const socials = [
     icon: "/images/socials/discord.svg",
     url: "#",
   },
-];
+] as const;
