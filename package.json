@@ -1,7 +1,7 @@
 {
   "name": "xora-saas",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,57 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "author": {
+    "name": "Sanidhya Kumar Verma",
+    "email": "sanidhya.verma12345@gmail.com",
+    "url": "https://github.com/sanidhyy"
+  },
+  "description": "Modern Animated AI Video Editing SaaS Landing Page",
+  "keywords": [
+    "reactjs",
+    "netlify",
+    "react",
+    "modern-ui",
+    "modern-ux",
+    "saas-ai",
+    "ai",
+    "artificial-intelligence",
+    "dark-theme",
+    "react-themes",
+    "postcss",
+    "prettier",
+    "tailwindcss",
+    "tailwindcss-animate",
+    "ui/ux",
+    "js",
+    "javascript",
+    "typescript",
+    "eslint",
+    "html",
+    "css",
+    "js",
+    "react"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/xora-saas.git"
+  },
+  "homepage": "https://github.com/sanidhyy/xora-saas#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/xora-saas/issues",
+    "email": "sanidhya.verma12345@gmail.com"
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/sanidhy"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/sanidhy"
+    }
+  ],
   "dependencies": {
     "clsx": "^2.1.1",
     "react": "^18.3.1",
