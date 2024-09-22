@@ -46,7 +46,7 @@ export const details = [
     icon: "/images/detail-4.png",
     title: "24 / 7 Customer support",
   },
-];
+] as const;
 
 export const faq = [
   {
