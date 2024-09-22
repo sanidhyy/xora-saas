@@ -246,7 +246,7 @@ export const logos = [
     width: 77,
     height: 48,
   },
-];
+] as const;
 
 export const links = [
   {
@@ -273,7 +273,7 @@ export const links = [
     icon: Web,
     url: "#",
   },
-];
+] as const;
 
 export const socials = [
   {
