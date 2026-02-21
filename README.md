@@ -43,6 +43,7 @@
 
 Here is the folder structure of this app.
 
+<!--- FOLDER_STRUCTURE_START --->
 ```bash
 xora-saas/
   |- public/
@@ -89,6 +90,7 @@ xora-saas/
   |- tsconfig.node.json
   |- vite.config.ts
 ```
+<!--- FOLDER_STRUCTURE_END --->
 
 <br />
 
@@ -125,6 +127,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and dependencies that are used in Xora.
 
+<!--- DEPENDENCIES_START --->
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [react](https://www.npmjs.com/package/react): ^18.3.1
 - [react-countup](https://www.npmjs.com/package/react-countup): ^6.5.3
@@ -150,6 +153,7 @@ Useful resources and dependencies that are used in Xora.
 - [typescript](https://www.npmjs.com/package/typescript): ^5.5.3
 - [typescript-eslint](https://www.npmjs.com/package/typescript-eslint): ^8.0.1
 - [vite](https://www.npmjs.com/package/vite): ^5.4.1
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
