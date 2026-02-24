@@ -49,9 +49,24 @@ xora-saas/
   |- public/
   |- src/
     |-- components/
+      |--- Button.tsx
+      |--- FaqItem.tsx
+      |--- Marker.tsx
+      |--- TestimonialItem.tsx
     |-- constants/
+      |--- icons.tsx
+      |--- index.ts
     |-- lib/
+      |--- utils.ts
     |-- sections/
+      |--- Download.tsx
+      |--- Faq.tsx
+      |--- Features.tsx
+      |--- Footer.tsx
+      |--- Header.tsx
+      |--- Hero.tsx
+      |--- Pricing.tsx
+      |--- Testimonials.tsx
     |-- App.tsx
     |-- index.css
     |-- main.tsx
