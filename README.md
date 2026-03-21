@@ -130,7 +130,7 @@ Useful resources and dependencies that are used in Xora.
 - [@types/react](https://www.npmjs.com/package/@types/react): ^18.3.3
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18.3.7
 - [@types/react-scroll](https://www.npmjs.com/package/@types/react-scroll): ^1.8.10
-- [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react): ^5.2.0
+- [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react): ^6.0.1
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.20
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10.0.0
