@@ -1,5 +1,5 @@
-import { useState } from "react";
-import CountUp from "react-countup";
+import { useEffect, useRef, useState } from "react";
+import { useCountUp } from "react-countup";
 import { Element } from "react-scroll";
 
 import { plans } from "../constants";
@@ -8,6 +8,7 @@ import { cn } from "../lib/utils";
 
 export const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
+
   return (
     <section>
       <Element name="pricing">
@@ -61,129 +62,142 @@ export const Pricing = () => {
 
           {/* pricing plans */}
           <div className="scroll-hide relative z-2 -mt-12 flex items-start max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6">
-            {plans.map(
-              (
-                {
-                  id,
-                  title,
-                  caption,
-                  features,
-                  icon,
-                  logo,
-                  priceMonthly,
-                  priceYearly,
-                },
-                i
-              ) => {
-                const isPrimaryPlan = i === 1;
+            {plans.map((plan, i) => {
+              const isPrimaryPlan = i === 1;
 
-                return (
-                  <div
-                    key={id}
-                    className="pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl xl:w-[calc(33.33%_+_2px)]"
-                  >
-                    {isPrimaryPlan && (
-                      <div className="g4 absolute left-0 right-0 top-0 z-1 h-330 rounded-tl-3xl rounded-tr-3xl" />
-                    )}
-
-                    <div
-                      className={cn(
-                        "absolute left-0 right-0 z-2 flex items-center justify-center",
-                        isPrimaryPlan ? "-top-6" : "-top-6 xl:-top-11"
-                      )}
-                    >
-                      <img
-                        src={logo}
-                        alt={title}
-                        className={cn(
-                          "object-contain drop-shadow-2xl",
-                          isPrimaryPlan ? "size-[120px]" : "size-[88px]"
-                        )}
-                      />
-                    </div>
-
-                    <div
-                      className={cn(
-                        "relative flex flex-col items-center",
-                        isPrimaryPlan ? "pt-24" : "pt-12"
-                      )}
-                    >
-                      <div
-                        className={cn(
-                          "small-2 relative z-2 mx-auto mb-6 rounded-20 border-2 px-4 py-1.5 uppercase",
-                          isPrimaryPlan
-                            ? "border-p3 text-p3"
-                            : "border-p1 text-p1"
-                        )}
-                      >
-                        {title}
-                      </div>
-
-                      <div className="relative z-2 flex items-center justify-center">
-                        <div
-                          className={cn(
-                            "h-num flex items-start",
-                            isPrimaryPlan ? "text-p3" : "text-p4"
-                          )}
-                        >
-                          $
-                          <CountUp
-                            start={priceMonthly}
-                            end={monthly ? priceMonthly : priceYearly}
-                            duration={0.4}
-                            useEasing={false}
-                            preserveValue
-                          />
-                        </div>
-
-                        <div className="small-1 relative top-3 ml-1 uppercase">
-                          / mo
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      className={cn(
-                        "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
-                        isPrimaryPlan && "border-b"
-                      )}
-                    >
-                      {caption}
-                    </div>
-
-                    <ul className="mx-auto space-y-4 xl:px-7">
-                      {features.map((feature) => (
-                        <li
-                          key={`${title}-${feature}`}
-                          className="relative flex items-center gap-5"
-                        >
-                          <img
-                            src="/images/check.png"
-                            alt="check"
-                            className="size-10 object-contain"
-                          />
-
-                          <p className="flex-1">{feature}</p>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-10 flex w-full justify-center">
-                      <Button icon={icon}>Get Started</Button>
-                    </div>
-
-                    {isPrimaryPlan && (
-                      <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">
-                        Limited time offer
-                      </p>
-                    )}
-                  </div>
-                );
-              }
-            )}
+              return (
+                <PricingCard
+                  key={plan.id}
+                  plan={plan}
+                  isPrimaryPlan={isPrimaryPlan}
+                  monthly={monthly}
+                />
+              );
+            })}
           </div>
         </div>
       </Element>
     </section>
+  );
+};
+
+interface PricingCardProps {
+  plan: (typeof plans)[number];
+  isPrimaryPlan: boolean;
+  monthly: boolean;
+}
+
+export const PricingCard = ({
+  plan,
+  isPrimaryPlan,
+  monthly,
+}: PricingCardProps) => {
+  const countUpRef = useRef<HTMLDivElement>(null);
+
+  const { title, caption, features, icon, logo, priceMonthly, priceYearly } =
+    plan;
+
+  const price = monthly ? priceMonthly : priceYearly;
+
+  const { update } = useCountUp({
+    start: priceMonthly,
+    end: price,
+    duration: 0.4,
+    useEasing: false,
+    prefix: "$",
+    ref: countUpRef,
+  });
+
+  useEffect(() => {
+    update(price);
+  }, [price, update]);
+
+  return (
+    <div className="pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-xl:min-w-80 max-lg:rounded-3xl xl:w-[calc(33.33%_+_2px)]">
+      {isPrimaryPlan && (
+        <div className="g4 absolute left-0 right-0 top-0 z-1 h-330 rounded-tl-3xl rounded-tr-3xl" />
+      )}
+
+      <div
+        className={cn(
+          "absolute left-0 right-0 z-2 flex items-center justify-center",
+          isPrimaryPlan ? "-top-6" : "-top-6 xl:-top-11"
+        )}
+      >
+        <img
+          src={logo}
+          alt={title}
+          className={cn(
+            "object-contain drop-shadow-2xl",
+            isPrimaryPlan ? "size-[120px]" : "size-[88px]"
+          )}
+        />
+      </div>
+
+      <div
+        className={cn(
+          "relative flex flex-col items-center",
+          isPrimaryPlan ? "pt-24" : "pt-12"
+        )}
+      >
+        <div
+          className={cn(
+            "small-2 relative z-2 mx-auto mb-6 rounded-20 border-2 px-4 py-1.5 uppercase",
+            isPrimaryPlan ? "border-p3 text-p3" : "border-p1 text-p1"
+          )}
+        >
+          {title}
+        </div>
+
+        <div className="relative z-2 flex items-center justify-center">
+          <div
+            className={cn(
+              "h-num flex items-start",
+              isPrimaryPlan ? "text-p3" : "text-p4"
+            )}
+          >
+            <div ref={countUpRef} />
+          </div>
+
+          <div className="small-1 relative top-3 ml-1 uppercase">/ mo</div>
+        </div>
+      </div>
+
+      <div
+        className={cn(
+          "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
+          isPrimaryPlan && "border-b"
+        )}
+      >
+        {caption}
+      </div>
+
+      <ul className="mx-auto space-y-4 xl:px-7">
+        {features.map((feature) => (
+          <li
+            key={`${title}-${feature}`}
+            className="relative flex items-center gap-5"
+          >
+            <img
+              src="/images/check.png"
+              alt="check"
+              className="size-10 object-contain"
+            />
+
+            <p className="flex-1">{feature}</p>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-10 flex w-full justify-center">
+        <Button icon={icon}>Get Started</Button>
+      </div>
+
+      {isPrimaryPlan && (
+        <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">
+          Limited time offer
+        </p>
+      )}
+    </div>
   );
 };
