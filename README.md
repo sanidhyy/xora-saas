@@ -82,8 +82,10 @@ xora-saas/
   |- postcss.config.js
   |- tailwind.config.js
   |- tsconfig.app.json
+  |- tsconfig.app.tsbuildinfo
   |- tsconfig.json
   |- tsconfig.node.json
+  |- tsconfig.node.tsbuildinfo
   |- vite.config.ts
 ```
 <!--- FOLDER_STRUCTURE_END --->
@@ -126,9 +128,9 @@ Useful resources and dependencies that are used in Xora.
 <!--- DEPENDENCIES_START --->
 - [@eslint/js](https://www.npmjs.com/package/@eslint/js): ^10.0.1
 - [@types/react](https://www.npmjs.com/package/@types/react): ^18.3.3
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.0.1
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18.3.7
 - [@types/react-scroll](https://www.npmjs.com/package/@types/react-scroll): ^1.8.10
-- [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react): ^5.0.0
+- [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react): ^5.2.0
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.20
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10.0.0
@@ -148,7 +150,7 @@ Useful resources and dependencies that are used in Xora.
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.12
 - [typescript](https://www.npmjs.com/package/typescript): ^5.5.3
 - [typescript-eslint](https://www.npmjs.com/package/typescript-eslint): ^8.0.1
-- [vite](https://www.npmjs.com/package/vite): ^7.0.0
+- [vite](https://www.npmjs.com/package/vite): ^8.0.1
 
 <!--- DEPENDENCIES_END --->
 
