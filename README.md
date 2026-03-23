@@ -148,7 +148,7 @@ Useful resources and dependencies that are used in Xora.
 - [react-slidedown](https://www.npmjs.com/package/react-slidedown): ^2.4.7
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.0.1
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.12
-- [typescript](https://www.npmjs.com/package/typescript): ^5.5.3
+- [typescript](https://www.npmjs.com/package/typescript): ^6.0.2
 - [typescript-eslint](https://www.npmjs.com/package/typescript-eslint): ^8.0.1
 - [vite](https://www.npmjs.com/package/vite): ^8.0.1
 
