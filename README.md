@@ -140,7 +140,7 @@ Useful resources and dependencies that are used in Xora.
 - [globals](https://www.npmjs.com/package/globals): ^17.0.0
 - [postcss](https://www.npmjs.com/package/postcss): ^8.4.47
 - [prettier](https://www.npmjs.com/package/prettier): ^3.3.3
-- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.7.1
+- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
 - [react](https://www.npmjs.com/package/react): ^18.3.1
 - [react-countup](https://www.npmjs.com/package/react-countup): ^6.5.3
 - [react-dom](https://www.npmjs.com/package/react-dom): ^18.3.1
