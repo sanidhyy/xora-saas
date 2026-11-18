@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { useCountUp } from "react-countup";
 import { Element } from "react-scroll";
 
@@ -92,7 +92,7 @@ export const PricingCard = ({
   isPrimaryPlan,
   monthly,
 }: PricingCardProps) => {
-  const countUpRef = useRef<HTMLDivElement>(null);
+  const countUpId = useId();
 
   const { title, caption, features, icon, logo, priceMonthly, priceYearly } =
     plan;
@@ -105,7 +105,7 @@ export const PricingCard = ({
     duration: 0.4,
     useEasing: false,
     prefix: "$",
-    ref: countUpRef,
+    ref: countUpId,
   });
 
   useEffect(() => {
@@ -156,7 +156,7 @@ export const PricingCard = ({
               isPrimaryPlan ? "text-p3" : "text-p4"
             )}
           >
-            <div ref={countUpRef} />
+            <div id={countUpId} />
           </div>
 
           <div className="small-1 relative top-3 ml-1 uppercase">/ mo</div>
