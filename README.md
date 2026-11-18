@@ -73,7 +73,7 @@ xora-saas/
     |-- vite-env.d.ts
   |- .gitignore
   |- .prettierrc
-  |- bun.lockb
+  |- bun.lock
   |- eslint-plugin-react-hooks.d.ts
   |- eslint.config.js
   |- index.html
