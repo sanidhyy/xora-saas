@@ -135,8 +135,8 @@ Useful resources and dependencies that are used in Xora.
 
 <!--- DEPENDENCIES_START --->
 - [@eslint/js](https://www.npmjs.com/package/@eslint/js): ^10.0.1
-- [@types/react](https://www.npmjs.com/package/@types/react): ^18.3.3
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19
 - [@types/react-scroll](https://www.npmjs.com/package/@types/react-scroll): ^1.8.10
 - [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react): ^6.0.1
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.20
@@ -149,7 +149,7 @@ Useful resources and dependencies that are used in Xora.
 - [postcss](https://www.npmjs.com/package/postcss): ^8.4.47
 - [prettier](https://www.npmjs.com/package/prettier): ^3.3.3
 - [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
-- [react](https://www.npmjs.com/package/react): ^18.3.1
+- [react](https://www.npmjs.com/package/react): ^19.3.1
 - [react-countup](https://www.npmjs.com/package/react-countup): ^6.5.3
 - [react-dom](https://www.npmjs.com/package/react-dom): ^19.3.1
 - [react-scroll](https://www.npmjs.com/package/react-scroll): ^1.9.0
